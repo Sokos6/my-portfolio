@@ -6,9 +6,9 @@ module.exports = {
 	jsSubDirectory: 'js/',
 	cssSubDirectory: 'css/',
 	metaInfo: {
-		title: 'Adam Morsi',
-		description: 'description',
-		url: 'https://example.com/',
-		keywords: 'add you keywords',
+		title: 'Alice Jowsey Portfolio',
+		description: 'Im a versatile software developer who lives in New Zealand',
+		url: 'https://ajowsey.com/', //change name here with new domain
+		keywords: 'alicejowsey, alice jowsey, software developer, portfolio',
 	},
 };
