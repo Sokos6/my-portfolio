@@ -1,0 +1,79 @@
+/* toolbar component styles */
+.toolbar {
+  & * {
+    box-sizing: border-box;
+  }
+
+  .backdrop {
+    top: 67px;
+  }
+
+  .toolbar-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eee;
+    height: 67px;
+    padding: 0 10px;
+    border-radius: 5px;
+  }
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar-navigation-items {
+  height: calc(100% - 67px);
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  top: 67px;
+  right: 0;
+  width: 70%;
+  max-width: 300px;
+  z-index: 200;
+  display: block;
+  transform: translateX(102%);
+  transition: transform 0.3s ease-out;
+  overflow-y: auto;
+
+  &.open-side-drawer {
+    transform: translateX(0);
+  }
+
+  .menu-btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .toolbar .backdrop {
+    display: none;
+  }
+
+  .toolbar-navigation-items {
+    display: flex;
+    height: auto;
+    background-color: #ffffff;
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: auto;
+    max-width: 100%;
+    z-index: 200;
+    transform: translateX(+0%);
+    transition: transform 0.3s ease-out;
+    overflow-y: initial;
+
+    .menu-btn {
+      width: fit-content;
+    }
+  }
+
+  .toolbar-toggle-button {
+    display: none;
+  }
+}
