@@ -1,0 +1,9 @@
+/* navigation item component styles */
+.navigation-item {
+  a {
+    &:active,
+    &.active {
+      color: yellow;
+    }
+  }
+}
